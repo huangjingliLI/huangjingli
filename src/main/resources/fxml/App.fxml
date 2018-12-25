@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="551.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+       <!--顶部菜单拉伸效果-->
+         <FlowPane alignment="BOTTOM_CENTER" focusTraversable="false" hgap="15" prefHeight="80.0" styleClass="blue-theme" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10">
+          <children>
+               <TextField text="请输入提示信息" />
+                <Button text="确定" />
+                <Label text="应收" />
+                <Label text="实收" />
+                <Label text="80" />
+                <Label text="90" />
+                <Label text="找零" />
+          </children>
+         </FlowPane>
+       <!--下部事网格布局-->
+       <GridPane hgap="10" layoutX="10.0" layoutY="90.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="90.0">
+          <children>
+              <TableView GridPane.columnIndex="0" GridPane.rowIndex="0">
+        </TableView>
+              <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="0">
+                 <children>
+                     <!--顶部的收银信息-->
+                     <Label text="收银员" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10" />
+                     <Label text="姓名" AnchorPane.leftAnchor="200" AnchorPane.topAnchor="10" />
+                     <Label text="班次" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="40" />
+                     <Label text="会员号" AnchorPane.leftAnchor="200" AnchorPane.topAnchor="40" />
+                     <Label text="流水号" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="70" />
+                     <Label text="折扣" AnchorPane.leftAnchor="200" AnchorPane.topAnchor="70" />
+                     <!--若干按钮，用网格布局-->
+                     <GridPane hgap="10" vgap="10" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="100">
+                        <children>
+                            <Button prefWidth="100" text="现金支付" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                            <Button prefWidth="100" text="1" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                            <Button prefWidth="100" text="2" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                            <Button prefWidth="100" text="3" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+            
+                            <Button prefWidth="100" text="支付宝支付" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                            <Button prefWidth="100" text="4" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            <Button prefWidth="100" text="5" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                            <Button prefWidth="100" text="6" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            
+                            <Button prefWidth="100" text="微信支付" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                            <Button prefWidth="100" text="4" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                            <Button prefWidth="100" text="5" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                            <Button prefWidth="100" text="6" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                            <!--第四行-->
+                            <HBox prefHeight="50" style="-fx-background-color: #00FF00" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                               <children>
+                                   <Button prefWidth="200" text="结算" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                               </children>
+                            </HBox>
+                        </children>
+                     <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                     </rowConstraints>
+                     </GridPane>
+                 </children>
+              </AnchorPane>
+          </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+         </rowConstraints>
+       </GridPane>
+   </children>
+</AnchorPane>
