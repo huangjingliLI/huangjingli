@@ -1,5 +1,11 @@
 package com.soft1841.sm.entity;
 
+/**
+ * 收银员实体类
+ * @author 黄敬理
+ * date 2018-12-25
+ */
+
 public class Seller {
     private Long id;
     private String number;

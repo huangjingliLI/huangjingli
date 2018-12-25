@@ -4,7 +4,6 @@ package com.soft1841.sm;
  * @author 黄敬理
  * date 2018-12-25
  */
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -21,9 +20,7 @@ public class CashLoginApp extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-
     public static void main(String[] args) {
         launch(args);
     }
-
 }

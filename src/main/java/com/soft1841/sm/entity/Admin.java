@@ -1,5 +1,11 @@
 package com.soft1841.sm.entity;
 
+/**
+ * 管理员实体类
+ * @author 黄敬理
+ * date 2018-12-25
+ */
+
 public class Admin {
     private Long id;
     private String name;
