@@ -1,5 +1,8 @@
 package com.soft1841.sm.entity;
 
+import javafx.beans.property.SimpleLongProperty;
+import javafx.beans.property.SimpleStringProperty;
+
 /**
  * 商品类别实体类
  * @author 黄敬理
@@ -7,49 +10,35 @@ package com.soft1841.sm.entity;
  */
 
 public class Type {
-    private long id;
-    private String name;
-    private String picture;
+    private final SimpleLongProperty id = new SimpleLongProperty();
+    private final SimpleStringProperty typeName = new SimpleStringProperty("");
     public Type(){
 
     }
-
-    public Type(long id, String name, String picture) {
-        this.id = id;
-        this.name = name;
-        this.picture = picture;
+    public Type(long id, String typeName) {
+     setId(id);
+     setTypeName(typeName);
     }
-
     public long getId() {
+        return id.get();
+    }
+    public SimpleLongProperty idProperty() {
         return id;
     }
-
     public void setId(long id) {
-        this.id = id;
+        this.id.set(id);
     }
-
-    public String getName() {
-        return name;
+    public String getTypeName() {
+        return typeName.get();
     }
-
-    public void setName(String name) {
-        this.name = name;
+    public SimpleStringProperty typeNameProperty() {
+        return typeName;
     }
-
-    public String getPicture() {
-        return picture;
+    public void setTypeName(String typeName) {
+        this.typeName.set(typeName);
     }
-
-    public void setPicture(String picture) {
-        this.picture = picture;
-    }
-
     @Override
     public String toString() {
-        return "Type{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", picture='" + picture + '\'' +
-                '}';
+        return  typeName.get();
     }
 }

@@ -1,6 +1,4 @@
 package com.soft1841.sm.dao;
-
-import cn.hutool.db.Entity;
 import com.soft1841.sm.entity.Type;
 
 import java.sql.SQLException;
@@ -8,12 +6,12 @@ import java.util.List;
 
 public interface TypeDAO {
     /**
-     * 新增图书类别
+     * 新增商品类别
      * @param type
      * @return
      * @throws SQLException
      */
-    Long inserType(Type type)throws SQLException;
+    Long insertType(Type type)throws SQLException;
 
     /**
      * 根据id删除类别
@@ -36,7 +34,5 @@ public interface TypeDAO {
      * @return
      * @throws SQLException
      */
-    Entity getTypeById(int id)throws SQLException;
-
     Type getTypeById(long id) throws SQLException;
 }

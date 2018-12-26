@@ -35,7 +35,7 @@ public class CashLoginController {
             mainStage.setTitle("super market");
             mainStage.setMaximized(true);
             mainStage.setScene(scene);
-            mainStage.getIcons().add(new Image("/img/u0.png"));
+            mainStage.getIcons().add(new Image("/img/me.png"));
             mainStage.show();
             Stage loginStage = (Stage) accountField.getScene().getWindow();
             loginStage.close();

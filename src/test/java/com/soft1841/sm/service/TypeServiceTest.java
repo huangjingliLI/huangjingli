@@ -1,6 +1,5 @@
 package com.soft1841.sm.service;
 
-import cn.hutool.db.Entity;
 import com.soft1841.sm.entity.Type;
 import com.soft1841.sm.utils.ServiceFactory;
 import org.junit.Test;
@@ -13,7 +12,7 @@ public class TypeServiceTest {
 
     @Test
     public void selectAllTypes() {
-        List<Entity> typeList = typeService.getAllTypes();
+        List<Type> typeList = typeService.getAllTypes();
         typeList.forEach(type -> System.out.println(type));
     }
 
@@ -25,7 +24,7 @@ public class TypeServiceTest {
     @Test
     public void addType() {
         Type type = new Type();
-        type.setName("测试新类别");
+        type.setTypeName("测试新类别");
         typeService.addType(type);
     }
 

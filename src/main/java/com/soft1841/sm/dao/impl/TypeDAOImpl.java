@@ -10,10 +10,10 @@ import java.util.List;
 
 public class TypeDAOImpl implements TypeDAO {
     @Override
-    public Long inserType(Type type) throws SQLException {
+    public Long insertType(Type type) throws SQLException {
         return Db.use().insertForGeneratedKey(
                 Entity.create("t_type")
-                        .set("type_name", type.getId())
+                        .set("type_name", type.getTypeName())
         );
     }
     @Override
@@ -25,7 +25,7 @@ public class TypeDAOImpl implements TypeDAO {
     @Override
     public List<Type> selectAllTypes() throws SQLException {
         //查询得到List<Entity>
-        List<Entity> entityList =  Db.use().query("SELECT * FROM t_type ");
+        List<Entity> entityList=  Db.use().query("SELECT * FROM t_type ");
         //创建一个List<Type>，存放具体的图书类别
         List<Type> typeList = new ArrayList<>();
         //遍历entityList，转换为typeList
@@ -36,17 +36,11 @@ public class TypeDAOImpl implements TypeDAO {
     }
 
     @Override
-    public Entity getTypeById(int id) throws SQLException {
-        return null;
-    }
-
-    @Override
-    public Type getTypeById(long id) throws SQLException {
-        //采用自定义带参查询语句，返回单个实体
-        Entity entity = Db.use().queryOne("SELECT * FROM t_type WHERE id = ? ", id);
-        //将Entity转换为Type类型返回
+   public Type getTypeById(long id)throws SQLException{
+        Entity entity = Db.use().queryOne("SELECT*FROM t_type WHERE id=?",id);
         return convertType(entity);
     }
+
     /**
      * 将Entity转换为Type类型
      *
@@ -56,7 +50,7 @@ public class TypeDAOImpl implements TypeDAO {
     private Type convertType(Entity entity) {
         Type type = new Type();
         type.setId(entity.getLong("id"));
-        type.setName(entity.getStr("type_name"));
+        type.setTypeName(entity.getStr("type_name"));
         return type;
     }
 }

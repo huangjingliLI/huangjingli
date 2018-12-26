@@ -1,34 +1,28 @@
 package com.soft1841.sm.entity;
 
-/**
- * 商品实体类
- * @author 黄敬理
- * date 2018-12-25
- */
-
 public class Goods {
-    private int id;
+    private long id;
     private String name;
     private String price;
     private String picture;
-    private String desceiption;
+    private String description;
     public Goods(){
 
     }
 
-    public Goods(int id, String name, String price, String picture, String desceiption) {
+    public Goods(long id, String name, String price, String picture, String description) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.picture = picture;
-        this.desceiption = desceiption;
+        this.description = description;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -56,12 +50,12 @@ public class Goods {
         this.picture = picture;
     }
 
-    public String getDesceiption() {
-        return desceiption;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesceiption(String desceiption) {
-        this.desceiption = desceiption;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override
@@ -71,7 +65,7 @@ public class Goods {
                 ", name='" + name + '\'' +
                 ", price='" + price + '\'' +
                 ", picture='" + picture + '\'' +
-                ", desceiption='" + desceiption + '\'' +
+                ", description='" + description + '\'' +
                 '}';
     }
 }

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.web.WebView?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml">
+
+    <VBox spacing="5">
+        <HBox prefHeight="200" spacing="20"
+              AnchorPane.leftAnchor="15" AnchorPane.topAnchor="5"
+              AnchorPane.rightAnchor="15">
+            <StackPane styleClass="box,default-theme">
+                <ImageView fitWidth="300" fitHeight="200">
+                    <Image url="/img/me.png"/>
+                </ImageView>
+            </StackPane>
+            <StackPane styleClass="box,default-theme">
+                <ImageView fitWidth="300" fitHeight="200">
+                    <Image url="/img/me.png"/>
+                </ImageView>
+            </StackPane>
+            <StackPane styleClass="box,default-theme">
+                <ImageView fitWidth="300" fitHeight="200">
+                    <Image url="/img/me.png"/>
+                </ImageView>
+            </StackPane>
+        </HBox>
+        <HBox spacing="20">
+            <StackPane styleClass="box,default-theme" minHeight="260">
+                <ImageView fitWidth="630" fitHeight="260">
+                    <Image url="/img/me.png"/>
+                </ImageView>
+            </StackPane>
+            <StackPane>
+                <VBox spacing="5">
+                    <StackPane styleClass="box,default-theme" maxHeight="160">
+                        <ImageView fitWidth="300" fitHeight="160">
+                            <Image url="/img/me.png"/>
+                        </ImageView>
+                    </StackPane>
+                    <StackPane styleClass="box,default-theme" maxHeight="160">
+                        <ImageView fitWidth="300" fitHeight="160">
+                            <Image url="/img/me.png"/>
+                        </ImageView>
+                    </StackPane>
+                </VBox>
+            </StackPane>
+        </HBox>
+    </VBox>
+</AnchorPane>

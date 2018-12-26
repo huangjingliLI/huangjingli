@@ -41,7 +41,7 @@ public class TypeServiceImpl implements TypeService {
         long result = 0;
         try {
             //调用底层DAO的查询新增类别方法，薄层封装，返回自增主键
-            result = typeDAO.inserType(type);
+            result = typeDAO.insertType(type);
         } catch (SQLException e) {
             System.err.println("新增类别出现异常!");
         }
