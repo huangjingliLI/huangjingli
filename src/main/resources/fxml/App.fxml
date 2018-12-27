@@ -12,8 +12,9 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane prefHeight="551.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8"
-            xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0"
+             prefWidth="1000.0" xmlns:fx="http://javafx.com/javafx/8.0.172-ea"
+             fx:controller="com.soft1841.sm.controller.CashLoginController">
    <children>
        <!--顶部菜单拉伸效果-->
          <FlowPane alignment="BOTTOM_CENTER" focusTraversable="false" hgap="15" prefHeight="80.0" styleClass="blue-theme" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10">
@@ -90,4 +91,4 @@
          </rowConstraints>
        </GridPane>
    </children>
-</AnchorPane>
+</BorderPane>

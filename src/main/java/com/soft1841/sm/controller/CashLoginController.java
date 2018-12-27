@@ -7,6 +7,7 @@ package com.soft1841.sm.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
@@ -22,15 +23,15 @@ public class CashLoginController {
     public void login() throws Exception {
           String account = accountField.getText().trim();
          String password = passwordField.getText().trim();
-        if ("huangjingli".equals(account) && "soft1841".equals(password)) {
+        if ("11".equals(account) && "11".equals(password)) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("提示");
             alert.setContentText("登录成功!");
             alert.showAndWait();
             Stage mainStage = new Stage();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/CashHomepage.fxml"));
-            BorderPane root = fxmlLoader.load();
-            Scene scene = new Scene(root);
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/cashHomepage1.fxml"));
+            Parent root = fxmlLoader.load();
+            Scene scene = new Scene(root,1000,600);
             scene.getStylesheets().add("/css/style.css");
             mainStage.setTitle("super market");
             mainStage.setMaximized(true);

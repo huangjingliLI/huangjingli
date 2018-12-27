@@ -17,11 +17,9 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class TypeController implements Initializable {
-    //获得布局文件中的表格对象
     @FXML
-    private TableView<Type> typeTable;
+    private TableView typeTable;
 
-    //定义ObservableList数据集合
     private ObservableList<Type> typeData = FXCollections.observableArrayList();
 
     //通过工厂类获得TypeService的实例
@@ -32,7 +30,6 @@ public class TypeController implements Initializable {
 
     private TableColumn<Type, Type> delCol = new TableColumn<>("操作");
 
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         //水平方向不显示滚动条
@@ -41,6 +38,7 @@ public class TypeController implements Initializable {
         delCol.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
         delCol.setCellFactory(param -> new TableCell<Type, Type>() {
             private final Button deleteButton = ComponentUtil.getButton("删除", "warning-theme");
+
             @Override
             protected void updateItem(Type type, boolean empty) {
                 super.updateItem(type, empty);
@@ -61,41 +59,42 @@ public class TypeController implements Initializable {
                     if (result.get() == ButtonType.OK) {
                         typeData.remove(type);
                         //调用typeService的删除类别方法
-                        typeService.deleteType(type.getId());
+                        typeService.deleteTypeById(type.getId());
                     }
                 });
             }
         });
         //删除列加入表格
         typeTable.getColumns().add(delCol);
-        typeList = typeService.getAllTypes();
+        typeList = typeService.selectAllTypes();
         showTypeData(typeList);
     }
+
+    private void showTypeData(List<Type> typeList) {
+        typeData.addAll(typeList);
+        typeTable.setItems(typeData);
+    }
+
     public void addType() {
         //创建一个输入对话框
         TextInputDialog dialog = new TextInputDialog("新类别");
         dialog.setTitle("商品类别");
         dialog.setHeaderText("新增商品类别");
         dialog.setContentText("请输入商品类别名称:");
-        Optional<String> result = dialog.showAndWait();
-//        result.ifPresent(name -> System.out.println("你的输入： " + name));
+        Optional<String> result1 = dialog.showAndWait();
         //确认输入了内容
-        if (result.isPresent()) {
+        if (result1.isPresent()) {
             //获得输入的内容
-            String typeName = result.get();
+            String typeName = result1.get();
             //创建一个Type对象，插入数据库，并返回主键
             Type type = new Type();
             type.setTypeName(typeName);
             long id = 0;
-            id = typeService.addType(type);
+            id = typeService.insertType(type);
             type.setId(id);
             //加入ObservableList，刷新模型视图，不用重新查询数据库也可以立刻看到结果
             typeData.add(type);
+
         }
     }
-    private void showTypeData(List<Type> typeList) {
-        typeData.addAll(typeList);
-        typeTable.setItems(typeData);
-    }
 }
-

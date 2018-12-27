@@ -1,46 +1,46 @@
-package com.soft1841.sm.dao;
+package com.soft1841.sm.service;
 
-import cn.hutool.db.Entity;
 import com.soft1841.sm.entity.Goods;
 
 import java.sql.SQLException;
 import java.util.List;
 
-public interface GoodsDAO {
+public interface GoodsService {
     /**
      * 获取所有商品
      *
      * @return
      */
-    List<Entity> getAllGoods() throws SQLException;
+    List<Goods> getAllGoods();
 
     /**
      * 新增商品
      *
      * @param goods
      */
-    Long insertGoods(Goods goods) throws SQLException;
+    Long insertGoods(Goods goods);
 
     /**
      * 根据id删除商品
      *
      * @param id
      */
-    int deleteGoodsByID(long id) throws SQLException;
+    int deleteGoodsByID(long id);
 
     /**
      * 根据id查询商品
+     *
      * @param id
      * @return
      */
-    Entity getGoodsById(long id) throws SQLException;
+    Goods getGoodsById(long id);
 
     /**
      * 修改商品信息
+     *
      * @param goods
      */
-
-    int updateGoods(Goods goods) throws SQLException;
+    int updateGoods(Goods goods);
 
     /**
      * 根据商品类别查询商品
@@ -48,6 +48,6 @@ public interface GoodsDAO {
      * @return
      * @throws SQLException
      */
-    List<Goods> getGoodsByTypeId(long typeId) throws SQLException;
+    List<Goods> getGoodsByTypeId(long typeId);
 
 }

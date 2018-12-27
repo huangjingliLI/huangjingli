@@ -9,24 +9,24 @@ public interface TypeService {
      * 获取所有商品类别的功能
      * @return
      */
-    List<Type> getAllTypes();
+    List<Type> selectAllTypes();
 
     /**
      * 根据id查询类别
      * @param id
      * @return
      */
-    Type getType(long id);
+    Type getTypeById(long id);
 
     /**
      * 添加类别
      * @param type
      */
-    Long addType(Type type);
+    Long insertType(Type type);
 
     /**
      * 删除类别
      * @param id
      */
-    void deleteType(long id);
+    void deleteTypeById(long id);
 }

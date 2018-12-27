@@ -44,7 +44,7 @@
                         </TitledPane>
                         <TitledPane alignment="TOP_LEFT" text="商品管理">
                             <VBox minHeight="100" spacing="10" styleClass="dark-theme">
-                                <Button styleClass="menu-btn" text="商品信息" />
+                                <Button styleClass="menu-btn" text="商品信息" onAction="#listGoods"/>
                                 <Button styleClass="menu-btn" text="统计分析" />
                             </VBox>
                         </TitledPane>

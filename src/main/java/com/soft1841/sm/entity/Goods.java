@@ -2,20 +2,25 @@ package com.soft1841.sm.entity;
 
 public class Goods {
     private long id;
+    private long typeId;
+    private String barCode;
     private String name;
     private String price;
-    private String picture;
+    private String avatar;
+    private String quantity;
     private String description;
-    public Goods(){
+    private String typename;
 
-    }
-
-    public Goods(long id, String name, String price, String picture, String description) {
+    public Goods() {
         this.id = id;
+        this.typeId = typeId;
+        this.barCode = barCode;
         this.name = name;
         this.price = price;
-        this.picture = picture;
+        this.avatar = avatar;
+        this.quantity = quantity;
         this.description = description;
+        this.typename = typename;
     }
 
     public long getId() {
@@ -24,6 +29,22 @@ public class Goods {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public long getTypeId() {
+        return typeId;
+    }
+
+    public void setTypeId(long typeId) {
+        this.typeId = typeId;
+    }
+
+    public String getBarCode() {
+        return barCode;
+    }
+
+    public void setBarCode(String barCode) {
+        this.barCode = barCode;
     }
 
     public String getName() {
@@ -42,12 +63,20 @@ public class Goods {
         this.price = price;
     }
 
-    public String getPicture() {
-        return picture;
+    public String getAvatar() {
+        return avatar;
     }
 
-    public void setPicture(String picture) {
-        this.picture = picture;
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    public String getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
     }
 
     public String getDescription() {
@@ -58,14 +87,26 @@ public class Goods {
         this.description = description;
     }
 
+    public String getTypename() {
+        return typename;
+    }
+
+    public void setTypename(String typename) {
+        this.typename = typename;
+    }
+
     @Override
     public String toString() {
         return "Goods{" +
                 "id=" + id +
+                ", typeId=" + typeId +
+                ", barCode='" + barCode + '\'' +
                 ", name='" + name + '\'' +
                 ", price='" + price + '\'' +
-                ", picture='" + picture + '\'' +
+                ", avatar='" + avatar + '\'' +
+                ", quantity='" + quantity + '\'' +
                 ", description='" + description + '\'' +
+                ", typename='" + typename + '\'' +
                 '}';
     }
 }

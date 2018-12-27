@@ -1,6 +1,5 @@
 package com.soft1841.sm.dao;
 
-import cn.hutool.db.Entity;
 import com.soft1841.sm.entity.Type;
 import com.soft1841.sm.utils.DAOFactory;
 import org.junit.Test;
@@ -19,21 +18,19 @@ import java.util.List;
             type.setTypeName("测试类别");
             System.out.println(typeDAO.insertType(type));
         }
-
         @Test
         public void deleteTypeById() throws SQLException {
-            typeDAO.deleteTypeById(7);
+            typeDAO.deleteTypeById(3);
         }
 
         @Test
         public void selectAllTypes() throws SQLException {
             List<Type> typeList = typeDAO.selectAllTypes();
-            typeList.forEach(type -> System.out.println(type));
+            typeList.forEach(entity -> System.out.println(entity));
         }
-
         @Test
         public void getTypeById() throws SQLException {
-            Type type = typeDAO.getTypeById(1);
-            System.out.println(type);
+            Type entity = typeDAO.getTypeById(3);
+            System.out.println(entity);
         }
     }
