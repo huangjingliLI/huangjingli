@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0"
+            prefWidth="1920.0" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" layoutX="7.0">
+         <image>
+            <Image url="/img/main.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="72.0" layoutY="30.0" mnemonicParsing="false" style="-fx-background-color: #D0C1EB;"
+              text="退出系统" textFill="#2c8030" fx:id="closeButton" onAction="#closeButtonAction"/>
+      <Button layoutX="154.0" layoutY="30.0" mnemonicParsing="false" style="-fx-background-color: #67BECE;"
+              text="退出登录" textFill="#b51414" fx:id="exitButton" onAction="#exitButtonAction"/>
+      <Button layoutX="99.0" layoutY="89.0" mnemonicParsing="false" style="-fx-background-color: #E09FB2;"
+              text="商品查询" textFill="#b8491a" onAction="#listGoods"/>
+      <Button layoutX="208.0" layoutY="53.0" mnemonicParsing="false" style="-fx-background-color: #339F74;"
+              text="商品类别" textFill="#0f4894" onAction="#listType" />
+   </children>
+</AnchorPane>

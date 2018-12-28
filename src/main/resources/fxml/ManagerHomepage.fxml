@@ -33,7 +33,6 @@
             <Button styleClass="btn-basic,btn-radius-large,blue-theme" text="退出登录"
                     fx:id="exitButton" onAction="#exitButtonAction" AnchorPane.topAnchor="20"
                     AnchorPane.rightAnchor="120"/>
-
             <Button styleClass="btn-basic,btn-radius-large,blue-theme" text="退出系统"
                     fx:id="closeButton" onAction="#closeButtonAction" AnchorPane.topAnchor="20"
                     AnchorPane.rightAnchor="20"/>
