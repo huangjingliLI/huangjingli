@@ -51,6 +51,7 @@ public class GoodsController implements Initializable {
 
         typeComboBox.getItems().setAll("服装类", "食品类", "生活用品类", "学习工具类", "小礼品类", "摆件类", "医药类", "手机类", "电脑类");
     }
+
     private void showGoods(List<Entity> goodsList) {
         ObservableList<Node> observableList = goodsPane.getChildren();
         goodsPane.getChildren().removeAll(Collections.singleton(observableList));
@@ -88,7 +89,25 @@ public class GoodsController implements Initializable {
             //点击删除按钮做的事件
             Button delBtn = new Button("删除");
             //点击删除按钮做的事件
-
+            delBtn.setOnAction(event -> {
+                //弹出一个确认对话框
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("确认对话框");
+                alert.setContentText("确定要删除此纪录吗？");
+                //确认
+                Optional<ButtonType> result = alert.showAndWait();
+                if (result.get() == ButtonType.OK) {
+                    try {
+                        //得到id
+                        long id = entity.getLong("id");
+                        goodsDAO.deleteGoodsByID(id);
+                        //从流式面板删除
+                        goodsPane.getChildren().remove(hBox);
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
             //按钮美化
             delBtn.getStyleClass().addAll("btn-basic", "warning-theme", "btn-radius-large");
             //商品图片大小
@@ -144,6 +163,7 @@ public class GoodsController implements Initializable {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                 goods.setTypename(newValue);
+
             }
         });
         //条码输入框
@@ -174,6 +194,8 @@ public class GoodsController implements Initializable {
             String priceString = priceField.getText().trim();
             String quantityString = quantityField.getText().trim();
             String descriptionString = descriptionField.getText().trim();
+
+
             goods.setName(nameString);
             goods.setAvatar(avatarString);
             goods.setQuantity(quantityString);
@@ -239,7 +261,25 @@ public class GoodsController implements Initializable {
             //点击删除按钮做的事件
             Button delBtn = new Button("删除");
             //点击删除按钮做的事件
-
+            delBtn.setOnAction(event -> {
+                //弹出一个确认对话框
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("确认对话框");
+                alert.setContentText("确定要删除此纪录吗？");
+                //确认
+                Optional<ButtonType> result = alert.showAndWait();
+                if (result.get() == ButtonType.OK) {
+                    try {
+                        //得到id
+                        long id = goods.getLong("goods_id");
+                        goodsDAO.deleteGoodsByID(id);
+                        //从流式面板删除
+                        goodsPane.getChildren().remove(hBox);
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
             //按钮美化
             delBtn.getStyleClass().addAll("btn-basic", "warning-theme", "btn-radius-large");
             //商品图片大小
@@ -270,7 +310,9 @@ public class GoodsController implements Initializable {
                 goodsPane.getChildren().add(hBox);
             }
             //goodsPane.getChildren().add(hBox);
+
         }
+
     }
 }
 

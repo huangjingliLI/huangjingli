@@ -23,7 +23,7 @@ public class ManagerLoginController {
     public void login() throws Exception {
         String account = accountField.getText().trim();
         String password = passwordField.getText().trim();
-        if ("huangjingli".equals(account) && "soft1841".equals(password)) {
+        if ("11".equals(account) && "11".equals(password)) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("提示");
             alert.setContentText("登录成功!");

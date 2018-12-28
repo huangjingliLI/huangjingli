@@ -197,7 +197,7 @@
     -fx-text-fill: #BC435C;
 }
 #mainContainer{
-    -fx-background-image: url("/img");
+    -fx-background-image: url("/img/login.jpg");
 }
 .new-theme{
     -fx-background-color:#D8EEF3;
