@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 public class ManagerLoginApp extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/manager.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
         primaryStage.setTitle("超市收银系统");
         primaryStage.setScene(new Scene(root, 500, 400));
         primaryStage.show();

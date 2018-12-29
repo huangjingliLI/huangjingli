@@ -12,6 +12,10 @@ public class DAOFactory {
         return new TypeDAOImpl();
     }
     public static GoodsDAO getGoodsDAOInstance() {return new GoodsDAOImpl();}
+    public static AdminDAO getAdminDAOInstance() { return new AdminDAOImpl(); }
+    public static SellerDAO getSellerDAOInstance() {
+        return new SellerDAOImpl();
+    }
 
 }
 

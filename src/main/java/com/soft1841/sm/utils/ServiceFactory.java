@@ -11,4 +11,11 @@ public class ServiceFactory {
     public static GoodsService getGoodsServiceInstance(){
         return new GoodsServiceImpl();
     }
+    public static AdminService getAdminServiceInstance() {
+        return new AdminServiceImpl();
+    }
+    public static SellerService getSellerServiceInstance() {
+        return new SellerServiceImpl();
+    }
+
 }

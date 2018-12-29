@@ -31,7 +31,7 @@ public class MainController{
     @FXML
     private void exitButtonAction() throws Exception {
         Stage loginStage = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/manager.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/login.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root, 570, 395);
         scene.getStylesheets().add("/css/style.css");
@@ -67,6 +67,9 @@ public class MainController{
 
     public void listGoods() throws Exception {
         switchView("goods.fxml");
+    }
+    public void listSeller()throws Exception{
+        switchView("seller.fxml");
     }
 
 }

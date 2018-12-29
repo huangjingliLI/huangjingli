@@ -108,13 +108,13 @@
                         <TitledPane styleClass="default-theme" animated="false" prefHeight="200" prefWidth="220" text="用户管理">
                             <VBox styleClass="new-theme" prefHeight="250.0" prefWidth="220" spacing="20.0">
                                 <Button mnemonicParsing="false" prefHeight="50" prefWidth="160"
-                                        text="管理员信息" styleClass="menu-btn">
+                                        text="管理员信息" styleClass="menu-btn" >
                                     <VBox.margin>
                                         <Insets right="-10.0"/>
                                     </VBox.margin>
                                 </Button>
                                 <Button mnemonicParsing="false" prefHeight="50" prefWidth="160"
-                                        text="收银员信息" styleClass="menu-btn" >
+                                        text="收银员信息" styleClass="menu-btn" onAction="#listSeller" >
                                     <VBox.margin>
                                         <Insets right="-10.0"/>
                                     </VBox.margin>
