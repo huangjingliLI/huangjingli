@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 
 <AnchorPane prefHeight="932.0" prefWidth="838.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-fx:controller="com.soft1841.sm.controller.SellerController">
+fx:controller="com.soft1841.sm.controller.AdminController">
     <FlowPane columnHalignment="CENTER" hgap="20.0" layoutX="28.0" layoutY="136.0" prefHeight="816.0" prefWidth="805.0" stylesheets="@../css/style.css" vgap="20.0">
         <VBox prefHeight="246.0" prefWidth="376.0" spacing="20.0" styleClass="new-theme" stylesheets="@../css/style.css">
             <VBox prefHeight="261.0" prefWidth="376.0">

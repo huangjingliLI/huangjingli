@@ -51,7 +51,7 @@ public class MainController{
     //封装一个切换视图的方法：用来根据fxml文件切换视图内容
     private void switchView(String fileName) throws Exception {
         //清空原有内容
-       mainContainer.getChildren().clear();
+        mainContainer.getChildren().clear();
         AnchorPane anchorPane = new FXMLLoader(getClass().getResource("/fxml/" + fileName)).load();
         mainContainer.getChildren().add(anchorPane);
     }
@@ -70,6 +70,9 @@ public class MainController{
     }
     public void listSeller()throws Exception{
         switchView("seller.fxml");
+    }
+    public void listAdmin() throws Exception{
+        switchView("admin.fxml");
     }
 
 }

@@ -96,7 +96,6 @@ public class SellerController implements Initializable {
                         Label idLabel1 = new Label(seller.getNumber());
                         vBox.getChildren().addAll(imageView1, nameLabel1, idLabel1);
                     });
-
                     vBox.getChildren().addAll(delBtn,reBtn);
                 }
             });

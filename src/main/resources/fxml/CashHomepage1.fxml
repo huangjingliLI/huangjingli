@@ -74,7 +74,7 @@
                                         <TableColumn prefWidth="75.0" text="规格" />
                                         <TableColumn prefWidth="75.0" text="单价" />
                                         <TableColumn prefWidth="75.0" text="数量" />
-                                        <TableColumn prefWidth="75.0" text="日期" />
+                                        <TableColumn prefWidth="75.0" text="小计" />
                                     </columns>
                                 </TableView>
                             </children>
