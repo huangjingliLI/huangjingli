@@ -16,6 +16,7 @@ public class DAOFactory {
     public static SellerDAO getSellerDAOInstance() {
         return new SellerDAOImpl();
     }
+    public static MemberDAO getMemberDAOInstance() { return new MemberDAOImpl(); }
 
 }
 
