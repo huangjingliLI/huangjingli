@@ -64,6 +64,9 @@ public class MainController{
     public void listType() throws Exception {
         switchView("type.fxml");
     }
+    public void listMember() throws Exception{
+        switchView("member.fxml");
+    }
 
     public void listGoods() throws Exception {
         switchView("goods.fxml");

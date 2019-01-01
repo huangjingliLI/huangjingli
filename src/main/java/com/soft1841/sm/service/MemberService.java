@@ -1,4 +1,38 @@
 package com.soft1841.sm.service;
 
+import com.soft1841.sm.entity.Member;
+
+import java.util.List;
+
 public interface MemberService {
+
+    /**
+     * 添加会员
+     * @param member
+     */
+    Long insertMember(Member member);
+
+    /**
+     * 删除会员
+     * @param id
+     */
+    void deleteMemberById(long id);
+
+    /**
+     * 查询所有会员
+     * @return
+     */
+    List<Member> selectAllMember();
+
+    /**
+     * 根据id查询会员
+     * @param id
+     * @return
+     */
+    Member getMemberById(long id);
+
+    void updateMemberPhone(Member member);
+
+    List<Member> getMemberByName(String keywords);
+
 }
