@@ -8,6 +8,7 @@ import com.soft1841.sm.dao.impl.*;
  */
 public class DAOFactory {
 
+
     public static TypeDAO getTypeDAOInstance() {
         return new TypeDAOImpl();
     }
@@ -17,6 +18,7 @@ public class DAOFactory {
         return new SellerDAOImpl();
     }
     public static MemberDAO getMemberDAOInstance() { return new MemberDAOImpl(); }
+    public static DetailDAO getDetailDAOInstance(){return new DetailDAOImpl();}
 
 }
 

@@ -60,7 +60,7 @@ public class LoginController  {
                 alert.setTitle("提示");
                 if (flag) {
                     Stage mainStage = new Stage();
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/managerHomepage.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
                     BorderPane root = fxmlLoader.load();
                     Scene scene = new Scene(root);
                     scene.getStylesheets().add("/css/style.css");
